@@ -63,3 +63,39 @@ let seattle = {
 };
 
 seattle.renderTheList();
+
+
+const tokyoStore = document.getElementById('tokyoList');
+
+let tokyo = {
+  name:'Tokyo',
+  min: 3,
+  max: 24,
+  avg: 1.2,
+  cookiesSoldEachHourArray:[],
+  getRandomCustomers:function(){
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  getCookieSalesPerHour:function(){
+    for (let i = 0; i < hours.length; i++) {
+      let customersThisHour = this.getRandomCustomers();
+      let totalCookiesSoldThisHour = Math.ceil(customersThisHour * this.avg);
+      this.cookiesSoldEachHourArray.push(totalCookiesSoldThisHour);
+    }
+    console.log(this.cookiesSoldEachHourArray);
+  },
+
+  renderTheList:function(){
+    this.getCookieSalesPerHour();
+    let p=document.createElement('p');
+    p.textContent=this.name;
+    tokyoStore.appendChild(p);
+
+    for (let i= 0; i<this.cookiesSoldEachHourArray.length;i++){
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${this.cookiesSoldEachHourArray[i]} cookies`;
+      tokyoStore.appendChild(li);
+    }
+  }
+};
+tokyo.renderTheList();
