@@ -99,3 +99,75 @@ let tokyo = {
   }
 };
 tokyo.renderTheList();
+
+
+const dubaiStore = document.getElementById('dubaiList');
+
+let dubai = {
+  name:'Dubai',
+  min: 11,
+  max: 38,
+  avg: 3.7,
+  cookiesSoldEachHourArray:[],
+  getRandomCustomers:function(){
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  getCookieSalesPerHour:function(){
+    for (let i = 0; i < hours.length; i++) {
+      let customersThisHour = this.getRandomCustomers();
+      let totalCookiesSoldThisHour = Math.ceil(customersThisHour * this.avg);
+      this.cookiesSoldEachHourArray.push(totalCookiesSoldThisHour);
+    }
+    console.log(this.cookiesSoldEachHourArray);
+  },
+
+  renderTheList:function(){
+    this.getCookieSalesPerHour();
+    let p=document.createElement('p');
+    p.textContent=this.name;
+    dubaiStore.appendChild(p);
+
+    for (let i= 0; i<this.cookiesSoldEachHourArray.length;i++){
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${this.cookiesSoldEachHourArray[i]} cookies`;
+      dubaiStore.appendChild(li);
+    }
+  }
+};
+dubai.renderTheList();
+
+
+const parisStore = document.getElementById('parisList');
+
+let paris = {
+  name:'Paris',
+  min: 20,
+  max: 38,
+  avg: 2.3,
+  cookiesSoldEachHourArray:[],
+  getRandomCustomers:function(){
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  getCookieSalesPerHour:function(){
+    for (let i = 0; i < hours.length; i++) {
+      let customersThisHour = this.getRandomCustomers();
+      let totalCookiesSoldThisHour = Math.ceil(customersThisHour * this.avg);
+      this.cookiesSoldEachHourArray.push(totalCookiesSoldThisHour);
+    }
+    console.log(this.cookiesSoldEachHourArray);
+  },
+
+  renderTheList:function(){
+    this.getCookieSalesPerHour();
+    let p=document.createElement('p');
+    p.textContent=this.name;
+    parisStore.appendChild(p);
+
+    for (let i= 0; i<this.cookiesSoldEachHourArray.length;i++){
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${this.cookiesSoldEachHourArray[i]} cookies`;
+      parisStore.appendChild(li);
+    }
+  }
+};
+paris.renderTheList();
