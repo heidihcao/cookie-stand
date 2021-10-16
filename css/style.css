@@ -1,0 +1,64 @@
+body{
+  background-color:rgb(187, 233, 248);
+  font-size: 2.5rem;
+}
+
+li{
+  margin:10px;
+
+}
+
+h1{
+  font-style: italic;
+}
+
+h3{
+  font-style: italic;
+  text-align: center;
+}
+
+ul{
+  margin-left:2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+  text-align: center;
+  font-size:1rem;
+}
+
+header{
+  text-align: center;
+}
+
+footer{
+  font-size: 1rem;
+  text-align:center;
+  color:whitesmoke;
+}
+
+p{
+  font-size: 1.35rem;
+  text-align: center;
+  font-style: italic;
+}
+
+section{
+  border:whitesmoke 1px;
+  margin:10px;
+  padding: 1px;
+  background-color: rgb(224, 245, 252);
+}
+
+table, td {
+  background-color: rgb(197, 197, 153);
+}
+

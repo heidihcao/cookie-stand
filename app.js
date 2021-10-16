@@ -6,17 +6,10 @@ const seattleStore = document.getElementById('seattleList');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 //console.log(seattleStore);
 
-//  min 6
-// max 15
-// 10 possible values that are between 6 and 15
-// 15 - 6 = 9 + 10
-// math.random() will give us a number between 1 & 10
-// ex.: 2
-// 2 + 6 = 8
-// 1, 2, 3 ,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
-// let's say we have a random number of 2.34
-// Math.floor() = 2
-// Math.ceil() = 3
+// const salesTable = document.querySelector('tbody');
+// const salesTHead = document.querySelector('thead');
+// const salesTFoot = document.querySelector('tfoot');
+
 
 let seattle = {
   name: 'Seattle',
@@ -73,6 +66,22 @@ let seattle = {
 };
 
 seattle.renderTheList();
+
+// Sales.prototype.renderTable = function(){
+//   let tr = document.createElement('tr');
+//   salesTableBody.appendChild(tr);
+//   let td = document.createElement('td');
+//   td.textContent= this.name;
+//   tr.appendChild(td);
+//   for (let i= 0; i<this.cookiesSoldEachHourArray.length;i++){
+//     let tdSales = document.createElement('td');
+//     tdSales.textContent = `${hours[i]}: ${this.cookiesSoldEachHourArray[i]} cookies`;
+//     tr.appendChild(tdSales);
+//   }
+// };
+
+// seattle.renderTable();
+// replace above line with Array[i]. render() and .renderTable();
 
 const tokyoStore = document.getElementById('tokyoList');
 let tokyo = {
