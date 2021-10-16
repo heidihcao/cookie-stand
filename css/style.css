@@ -46,7 +46,7 @@ footer{
 }
 
 p{
-  font-size: 1.35rem;
+  
   text-align: center;
   font-style: italic;
 }
@@ -58,7 +58,13 @@ section{
   background-color: rgb(224, 245, 252);
 }
 
-table, td {
+table {
   background-color: rgb(197, 197, 153);
+  border: 1px solid black;
+}
+
+td{
+  font-size: 25px;
+  border: 1px solid black;
 }
 
