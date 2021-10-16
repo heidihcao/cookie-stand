@@ -74,6 +74,8 @@ lima.renderTable();
 console.log(allStores[0].cookiesSoldEachHourArray);
 
 
+
+
 // const tokyoStore = document.getElementById('tokyoList');
 // let tokyo = {
 //   name:'Tokyo',
