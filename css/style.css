@@ -61,6 +61,8 @@ section{
 table {
   background-color: rgb(197, 197, 153);
   border: 1px solid black;
+  table-layout:auto;
+  width: 100%;
 }
 
 td{
