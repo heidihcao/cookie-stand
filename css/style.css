@@ -1,71 +1,49 @@
-body{
-  background-color:rgb(187, 233, 248);
-  font-size: 2.5rem;
+* {
+  box-sizing: border-box;
 }
 
-li{
-  margin:10px;
-
+body {
+  background-color: linen;
 }
 
-h1{
-  font-style: italic;
-}
-
-h3{
-  font-style: italic;
-  text-align: center;
-}
-
-ul{
-  margin-left:2rem;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-ol {
-  display: block;
-  list-style-type: decimal;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
-  text-align: center;
-  font-size:1rem;
-}
-
-header{
-  text-align: center;
-}
-
-footer{
-  font-size: 1rem;
-  text-align:center;
-  color:whitesmoke;
-}
-
-p{
-  
-  text-align: center;
-  font-style: italic;
-}
-
-section{
-  border:whitesmoke 1px;
-  margin:10px;
-  padding: 1px;
-  background-color: rgb(224, 245, 252);
-}
-
-table {
-  background-color: rgb(197, 197, 153);
-  border: 1px solid black;
-  table-layout:auto;
+header {
+  background-color: lightgrey;
   width: 100%;
 }
 
-td{
-  font-size: 25px;
-  border: 1px solid black;
+header nav {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center; 
+}
+
+main,
+header nav {
+  margin: 0 auto;
+  width: 960px;
+  /* border: 5px solid magenta; */
+}
+
+header ul {
+  /* display: inline-block; */
+  margin-left: 1rem;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  padding: .5rem;
+}
+
+main article {
+  float: right;
+  width: 480px;
+  padding: 1rem 0 0 1rem;
+}
+
+main article section {
+  overflow: scroll;
+  height: 300px;
 }
