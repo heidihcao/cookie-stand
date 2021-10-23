@@ -1,9 +1,9 @@
 'use strict';
 
 const salesTable = document.querySelector('tbody');
-
 //const salesTHead = document.querySelector('thead');
 const salesTFoot = document.querySelector('tfoot');
+const form = document.getElementById('addKittenForm');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Total by Store'];
 let allStores = [];
 function Store(name, min, max, avg) {
@@ -12,7 +12,6 @@ function Store(name, min, max, avg) {
   this.max = max;
   this.avg = avg;
   this.cookiesSoldEachHourArray = [];
-  // this.cookiesStoreTotal =0;
   this.getRandomCustomers = function () {
     return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
   };
@@ -21,7 +20,6 @@ function Store(name, min, max, avg) {
       let customersThisHour = this.getRandomCustomers();
       let totalCookiesSoldThisHour = Math.ceil(customersThisHour * this.avg);
       this.cookiesSoldEachHourArray.push(totalCookiesSoldThisHour);
-      // this.cookiesStoreTotal += this.cookiesSoldEachHourArray[i];
     }
   };
   this.getCookieSalesPerHour();
@@ -48,7 +46,6 @@ function renderHeader() {
 }
 renderHeader();
 
-console.log(allStores[0].cookiesSoldEachHourArray);
 
 Store.prototype.renderTable = function () {
   let tr = document.createElement('tr');
@@ -75,6 +72,20 @@ tokyo.renderTable();
 dubai.renderTable();
 paris.renderTable();
 lima.renderTable();
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let name = event.target.name.value;
+  let max = parseInt(event.target.max.value);
+  let min = parseInt(event.target.min.value);
+  let avg = parseInt(event.target.avg.value);
+  let newStore= new Store(name, max, min, avg);
+  newStore.renderTable();
+  form.reset();
+  console.log(newStore);
+}
+
+form.addEventListener('submit', handleSubmit);
 
 function totalsPerHour() {
   let tr = document.createElement('tr');
@@ -103,6 +114,7 @@ function totalsPerHour() {
 
 }
 totalsPerHour();
+
 
 
 // const tokyoStore = document.getElementById('tokyoList');
