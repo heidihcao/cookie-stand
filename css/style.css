@@ -20,13 +20,13 @@ header {
   width: 960px;
   color: darkgray; 
   margin:auto;
-
 }
 
 a {
   text-decoration: none;
   color: rgb(88, 36, 36);
   font-family: 'Gluten', cursive;
+
 }
 
 header nav {
@@ -42,7 +42,6 @@ header nav {
   margin: 0 auto;
   width: 960px;
   color: rgb(66, 65, 65);
-
 }
 
 main>img{
@@ -90,24 +89,25 @@ h3{
   color: rgb(88, 36, 36);
   font-size: 40px;
   font-family: 'Beth Ellen', cursive;
+  text-align: center;
+
 }
 main article section{
   overflow: scroll;
   height: 270px;
-  padding: 0 0 30px 0;
+  padding: 20px 0 30px 0;
   margin-bottom: 28px;
-  font-size: 22px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
+  font-size: 28px;
+  text-align:center;
 }
 
 main article a{
   border: 1px solid none;
   background-color: rgb(229, 236, 218);
-  color:rgb(88, 36, 36);
+  color:black;
   padding: 15px 60px;
   border-radius: 200px;
-  font-family: 'Itim', cursive;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 main article a:hover{
@@ -134,27 +134,23 @@ footer nav {
 
 td{
   font-size: 25px;
-  border: 1px solid black;
+  border: 1px solid  rgb(88, 36, 36);
 }
 
 table {
   background-color: rgb(229, 236, 218);
-  border: 1px solid black;
-  table-layout:auto;
-  width: 100%;
+  border: 1px solid  rgb(88, 36, 36);
+  width: 800px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 30px 30px;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-h1{
-  font-style: italic;
-  text-align: center;
-}
 
 
 p {
-  font-family: 'Itim', cursive;
+  font-family: 'Luckiest Guy', cursive;
+  font-size:50px;
 }
 
 form{
@@ -166,23 +162,25 @@ form{
 .forminput{
   display: block;
   font-size: 30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-family: 'Montserrat Alternates', sans-serif;
   color: rgb(75, 75, 75);
 }
 
 .submitbutton{
   font-size: 30px;
-  height: 40px;
-  margin-left:380px;
+  height: 50px;
+  margin-left:395px;
   margin-bottom: 50px;
   margin-top:10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Luckiest Guy', cursive;
   color: rgb(75, 75, 75);
+  border-radius: 150px;
 }
 
 legend{
-  font-size:30px;
-  margin-left: 230px;
+  font-size:20px;
+  margin-left: 160px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(75, 75, 75);
+  color: rgb(88, 36, 36);
 }

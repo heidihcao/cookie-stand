@@ -4,7 +4,7 @@ const salesTable = document.querySelector('tbody');
 //const salesTHead = document.querySelector('thead');
 const salesTFoot = document.querySelector('tfoot');
 const form = document.getElementById('addKittenForm');
-let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Total by Store'];
+let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'All Stores'];
 let allStores = [];
 function Store(name, min, max, avg) {
   this.name = name;
@@ -91,7 +91,7 @@ function totalsPerHour() {
   let tr = document.createElement('tr');
   let td = document.createElement('td');
   let totalbyHour = 0;
-  td.textContent = 'Total by Hour';
+  td.textContent = 'All Hours';
   tr.appendChild(td);
   salesTFoot.appendChild(tr);
   let totalHoursArray = allStores[0].cookiesSoldEachHourArray;
