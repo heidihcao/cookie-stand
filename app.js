@@ -1,7 +1,7 @@
 'use strict';
 
 const salesTable = document.querySelector('tbody');
-//const salesTHead = document.querySelector('thead');
+const salesTHead = document.querySelector('thead');
 const salesTFoot = document.querySelector('tfoot');
 const form = document.getElementById('addKittenForm');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'All Hours'];
@@ -34,15 +34,15 @@ let lima = new Store('Lima', 2, 16, 4.6);
 
 function renderHeader() {
   let tr = document.createElement('tr');
-  let td = document.createElement('td');
-  td.textContent = 'Hours';
-  tr.appendChild(td);
+  let th = document.createElement('th');
+  th.textContent = 'Hours';
+  tr.appendChild(th);
   for (let i = 0; i < hours.length; i++) {
-    let hour = document.createElement('td');
+    let hour = document.createElement('th');
     hour.textContent = `${hours[i]}`;
     tr.appendChild(hour);
   }
-  salesTable.appendChild(tr);
+  salesTHead.appendChild(tr);
 }
 renderHeader();
 
@@ -67,25 +67,13 @@ Store.prototype.renderTable = function () {
   salesTable.appendChild(tr);
 };
 
+//for loop through allStore array
 seattle.renderTable();
 tokyo.renderTable();
 dubai.renderTable();
 paris.renderTable();
 lima.renderTable();
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let name = event.target.name.value;
-  let max = parseInt(event.target.max.value);
-  let min = parseInt(event.target.min.value);
-  let avg = parseInt(event.target.avg.value);
-  let newStore= new Store(name, max, min, avg);
-  newStore.renderTable();
-  form.reset();
-  console.log(newStore);
-}
-
-form.addEventListener('submit', handleSubmit);
 
 function totalsPerHour() {
   let tr = document.createElement('tr');
@@ -116,6 +104,21 @@ function totalsPerHour() {
 totalsPerHour();
 
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let name = event.target.name.value;
+  let max = parseInt(event.target.max.value);
+  let min = parseInt(event.target.min.value);
+  let avg = parseInt(event.target.avg.value);
+  let newStore= new Store(name, max, min, avg);
+  newStore.renderTable();
+  form.reset();
+  console.log(allStores);
+  salesTFoot.innerHTML='';
+  totalsPerHour();
+}
+
+form.addEventListener('submit', handleSubmit);
 
 // const tokyoStore = document.getElementById('tokyoList');
 // let tokyo = {

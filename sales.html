@@ -33,14 +33,14 @@
       <form id="addKittenForm">
         <fieldset>
           <legend><p>Manually Input Sales Info</p></legend>
-          <div class="forminput"><label>Location</label>
-          <input name="name" type="text"/></div>
-          <div class="forminput"><label>Minimum Customers Per Hour</label>
-          <input name="min" type="number" /></div>
-          <div class="forminput"><label>Maximum Customers Per Hour</label>
-          <input name="max" type="number" /></div>
-          <div class="forminput"><label>Average Purchase Per Customer</label>
-          <input name="avg" type="number" /></div>
+          <div class="forminput"><label for="location">Location</label>
+          <input name="name" type="text" required id="location"/></div>
+          <div class="forminput"><label for="min">Minimum Customers Per Hour</label>
+          <input name="min" type="number" required id="min"/></div>
+          <div class="forminput"><label for="max">Maximum Customers Per Hour</label>
+          <input name="max" type="number" required id="max"/></div>
+          <div class="forminput"><label for="avg">Average Purchase Per Customer</label>
+          <input name="avg" type="number" required id="avg"/></div>
           <button type="submit" class="submitbutton">Submit</button>
         </fieldset>
       </form>
@@ -54,7 +54,8 @@
       <tbody>
         <tr> </tr>
       </tbody>
-      <tfoot></tfoot>
+      <tfoot>
+      </tfoot>
     </table>
   
   </main>
