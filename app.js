@@ -68,12 +68,13 @@ Store.prototype.renderTable = function () {
 };
 
 //for loop through allStore array
-
-seattle.renderTable();
-tokyo.renderTable();
-dubai.renderTable();
-paris.renderTable();
-lima.renderTable();
+function renderTable(){
+  for (let i=0; i<allStores.length; i++){
+    let storename = allStores[i];
+    storename.renderTable();
+  }
+}
+renderTable();
 
 
 function totalsPerHour() {
@@ -108,9 +109,6 @@ totalsPerHour();
 function handleSubmit(event) {
   event.preventDefault();
   let name = event.target.name.value;
-  if (typeof(name)!== String){
-    alert('Please enter a valid store name, alphabets only');
-  } else{escape;}
   let max = parseInt(event.target.max.value);
   let min = parseInt(event.target.min.value);
   let avg = parseInt(event.target.avg.value);
