@@ -20,6 +20,7 @@ header {
   width: 960px;
   color: darkgray; 
   margin:auto;
+  display:flex;
 }
 
 a {
@@ -118,12 +119,13 @@ main article a:hover{
 
 footer {
   background-color: rgb(229, 236, 218);
-  width: 960px;
   height: 100px;
   padding: 1rem;
   margin:auto;
   text-align: center;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Georgia',serif;
+  color:orange;
+  width: 960px;
 }
 
 footer nav {
@@ -145,16 +147,22 @@ th{
 table {
   background-color: rgb(229, 236, 218);
   border: 1px solid  rgb(88, 36, 36);
-  width: 800px;
+  width: 600px;
   text-align: center;
   margin-top: 30px 30px;
+  display: flexbox;
   font-family: 'Montserrat Alternates', sans-serif;
+  color: green;
+  margin-bottom: 100px;
 }
 
 
 p {
   font-family: 'Luckiest Guy', cursive;
   font-size:30px;
+  font-size:20px;
+  margin-left: 330px;
+  color: rgb(88, 36, 36);
 }
 
 form{
@@ -182,9 +190,4 @@ form{
   border-radius: 150px;
 }
 
-legend{
-  font-size:20px;
-  margin-left: 270px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(88, 36, 36);
-}
+

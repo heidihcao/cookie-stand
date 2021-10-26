@@ -68,6 +68,7 @@ Store.prototype.renderTable = function () {
 };
 
 //for loop through allStore array
+
 seattle.renderTable();
 tokyo.renderTable();
 dubai.renderTable();
@@ -107,9 +108,15 @@ totalsPerHour();
 function handleSubmit(event) {
   event.preventDefault();
   let name = event.target.name.value;
+  if (typeof(name)!== String){
+    alert('Please enter a valid store name, alphabets only');
+  } else{escape;}
   let max = parseInt(event.target.max.value);
   let min = parseInt(event.target.min.value);
   let avg = parseInt(event.target.avg.value);
+  if(min>max){
+    alert('Minimum cannot be larger than maximum');
+  } else {escape;}
   let newStore= new Store(name, max, min, avg);
   newStore.renderTable();
   form.reset();
